@@ -1,0 +1,11 @@
+.movieDisplay {
+    background: #444;
+    .movies {
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 2em;
+        color: white;
+
+    }
+}

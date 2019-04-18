@@ -4,7 +4,7 @@ import axios from 'axios';
 import './MovieList.scss';
 
 
-import MovieCard from '../components/MovieCard';
+import MoviesDisplay from '../components/MoviesDisplay';
 class MovieList extends Component {
   extractType = () => {
     const type = this.props.type
@@ -36,14 +36,9 @@ console.log(this.props);
       return <h1>loading movies</h1>
     } else {
       return (
-        <section className="MovieList">
+        <section className='MovieList'>
           <h1> {this.state.type} movies</h1>
-
-          <div className='movies'>
-            {this.state.movies.map(movie => (
-              <MovieCard key={movie.id} data={movie} />
-            ))}
-          </div>
+          <MoviesDisplay movies={this.state.movies} />
         </section>
       );
     }
