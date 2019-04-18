@@ -1,0 +1,11 @@
+
+.MovieList {
+    padding: 2em;
+    background: #444;
+    color:white;
+    .movies {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 2em;
+    }
+}

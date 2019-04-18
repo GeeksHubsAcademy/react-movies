@@ -1,0 +1,16 @@
+
+
+GET https://api.themoviedb.org/3/movie/popular?api_key=323112ea2281b9eb70f319f4df422c6b
+
+
+###
+
+GET https://api.themoviedb.org/3/movie/upcoming?api_key=323112ea2281b9eb70f319f4df422c6b&language=en-US&page=1
+
+###
+
+GET https://api.themoviedb.org/3/movie/top_rated?api_key=323112ea2281b9eb70f319f4df422c6b&language=en-US&page=1
+
+###
+
+GET https://api.themoviedb.org/3/movie/trending?api_key=323112ea2281b9eb70f319f4df422c6b&language=en-US&page=1
