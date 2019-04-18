@@ -6,8 +6,8 @@ import './MovieList.scss';
 
 import MovieCard from '../components/MovieCard';
 class MovieList extends Component {
-  extractType = uri => {
-    const type = uri.replace('/movies/', '').toLowerCase();
+  extractType = () => {
+    const type = this.props.type
 
     if (type === 'top_rated' || type === 'upcoming' || type === 'popular') {
       return type;
@@ -30,7 +30,7 @@ class MovieList extends Component {
   render() {
 console.log(this.props);
 
-    const newType = this.extractType(this.props.uri)
+    const newType = this.extractType()
     if (newType !== this.state.type) {
       this.getMovies(newType);
       return <h1>loading movies</h1>
