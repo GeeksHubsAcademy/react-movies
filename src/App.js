@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Router, Redirect } from '@reach/router';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import NotFound from './components/NotFound';
 
 import MovieDetail from './views/MovieDetail';
 import MovieList from './views/MovieList';
@@ -16,7 +17,8 @@ class App extends Component {
         <Router className='main'>
           <MovieDetail path='movie/:id' />
           <MovieList path='movies/:type' />
-          <Redirect default from="*" to="movies/popular" noThrow/>
+          <NotFound path='notFound' />
+          <Redirect default from='*' to='movies/popular' noThrow />
         </Router>
         <Footer />
       </div>
