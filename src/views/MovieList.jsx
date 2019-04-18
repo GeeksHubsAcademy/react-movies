@@ -28,6 +28,8 @@ class MovieList extends Component {
   }
 
   render() {
+console.log(this.props);
+
     const newType = this.extractType(this.props.uri)
     if (newType !== this.state.type) {
       this.getMovies(newType);

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Router } from '@reach/router';
+import { Router, Redirect } from '@reach/router';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
@@ -13,9 +13,10 @@ class App extends Component {
     return (
       <div className='app'>
         <Navigation />
-        <Router className="main">
-          <MovieList default path='movies/:type' />
+        <Router className='main'>
           <MovieDetail path='movie/:id' />
+          <MovieList path='movies/:type' />
+          <Redirect default from="*" to="movies/popular" noThrow/>
         </Router>
         <Footer />
       </div>
