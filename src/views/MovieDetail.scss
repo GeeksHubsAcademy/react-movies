@@ -13,9 +13,13 @@
         color: white;
         position: relative;
         display: grid;
-        grid-template-columns: 13em 1fr;
+        grid-template-columns: 15em 1fr;
         grid-gap: 2em;
+        @media(max-width: 500px) {
+        grid-template-columns:  10em 1fr;
 
+
+        }
         >* {
             position: relative;
             z-index: 1;
