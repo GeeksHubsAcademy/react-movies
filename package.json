@@ -2,7 +2,7 @@
   "name": "react-films",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://geekshubsacademy.github.io/react-movies",
+  "homepage": "https://geekshubsacademy.github.io/react-movies/",
   "dependencies": {
     "@reach/router": "1.1.0",
     "axios": "^0.18.0",
