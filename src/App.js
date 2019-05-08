@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <div className='app'>
         <Navigation />
-        <Router className='main' basepath='./'>
+        <Router className='main' >
           <MovieDetail path='movie/:id' />
           <MovieList path='movies/:type' />
           <NotFound path='notFound' />
