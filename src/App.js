@@ -19,7 +19,7 @@ class App extends Component {
           <MovieDetail path={basepath + '/movie/:id'} />
           <MovieList path={basepath + '/movies/:type'} />
           <NotFound path={basepath + '/notFound'} />
-          <Redirect default from='*' to={basepath + 'movies/popular'} noThrow />
+          <Redirect default from='*' to={basepath + '/movies/popular'} noThrow />
         </Router>
         <Footer />
       </div>
