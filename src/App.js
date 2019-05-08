@@ -11,15 +11,14 @@ import './App.scss'
 
 class App extends Component {
   render() {
-    const basepath = window.baseUrl || ''
     return (
       <div className='app'>
         <Navigation />
-        <Router className='main' basepath={basepath}>
-          <MovieDetail path={basepath + '/movie/:id'} />
-          <MovieList path={basepath + '/movies/:type'} />
-          <NotFound path={basepath + '/notFound'} />
-          <Redirect default from='*' to={basepath + '/movies/popular'} noThrow />
+        <Router className='main' >
+          <MovieDetail path={ '/movie/:id'} />
+          <MovieList path={ '/movies/:type'} />
+          <NotFound path={ '/notFound'} />
+          <Redirect default from='*' to={ '/movies/popular'} noThrow />
         </Router>
         <Footer />
       </div>
