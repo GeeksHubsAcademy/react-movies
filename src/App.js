@@ -16,10 +16,10 @@ class App extends Component {
       <div className='app'>
         <Navigation />
         <Router className='main' basepath={basepath}>
-          <MovieDetail path='movie/:id' />
-          <MovieList path='movies/:type' />
-          <NotFound path='notFound' />
-          <Redirect default from='*' to='movies/popular' noThrow />
+          <MovieDetail path={basepath + '/movie/:id'} />
+          <MovieList path={basepath + '/movies/:type'} />
+          <NotFound path={basepath + '/notFound'} />
+          <Redirect default from='*' to={basepath + 'movies/popular'} noThrow />
         </Router>
         <Footer />
       </div>
