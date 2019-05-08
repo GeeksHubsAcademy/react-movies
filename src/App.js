@@ -11,10 +11,11 @@ import './App.scss'
 
 class App extends Component {
   render() {
+    const basepath = window.baseUrl || ''
     return (
       <div className='app'>
         <Navigation />
-        <Router className='main' basepath='/react-movies'>
+        <Router className='main' basepath={basepath}>
           <MovieDetail path='movie/:id' />
           <MovieList path='movies/:type' />
           <NotFound path='notFound' />
