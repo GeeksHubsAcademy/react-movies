@@ -28,7 +28,7 @@ class MovieList extends Component {
   }
 
   render() {
-console.log(this.props);
+    console.log(this.props);
 
     const newType = this.extractType()
     if (newType !== this.state.type) {

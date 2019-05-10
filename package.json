@@ -19,7 +19,8 @@
     "eject": "react-scripts eject",
      "predeploy": "rm -rf docs",
      "deploy": "npm run build",
-     "postdeploy": "mv build docs"
+     "postdeploy": "mv build docs && mv docs/index.html docs/404.html"
+
   },
   "eslintConfig": {
     "extends": "react-app"

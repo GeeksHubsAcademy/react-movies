@@ -13,7 +13,8 @@ class MovieDetail extends React.Component {
   };
   getData() {
     const url = `https://api.themoviedb.org/3/movie/${this.props.id}?api_key=323112ea2281b9eb70f319f4df422c6b&language=en-US`;
-    const similar = `https://api.themoviedb.org/3/movie/${this.props.id}/similar?api_key=323112ea2281b9eb70f319f4df422c6b&language=en-US`;
+
+     const similar = `https://api.themoviedb.org/3/movie/${this.props.id}/similar?api_key=323112ea2281b9eb70f319f4df422c6b&language=en-US`;
 
     Axios.get(url)
       .then(res => this.setState({ movie: res.data, id: this.props.id }))
